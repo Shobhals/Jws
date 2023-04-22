@@ -1,0 +1,128 @@
+.chartStyle {
+  // box-shadow: 10px 5px 5px black;
+  box-shadow: 6px 3px 9px black;
+  padding: 1rem;
+  color: black;
+}
+
+.select-select {
+  font-size: 13px;
+  padding: 7px 8px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #bd2130;
+  border-color: #b21f2d;
+  outline: none;
+}
+
+.chlidDiv p {
+  color: #fbf5f5;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  /* border: 2px solid #000; */
+  line-height: 2rem;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 550;
+  //background: #2980b9;
+}
+
+.chlidOfChildDiv {
+  border-bottom: 1px solid #f1f1f1;
+  padding-top: 0.85rem;
+}
+
+.chlidOfChildDiv1 p {
+  background: #2ecc71;
+}
+
+.chlidOfChildDiv2 p {
+  background: #3498db;
+}
+
+.chlidOfChildDiv3 p {
+  background: #f1c40f;
+}
+
+.chlidOfChildDiv4 p {
+  background: #9b59b6;
+}
+
+.chlidOfChildDiv5 p {
+  background: #ff9ff3;
+}
+
+.paymentCollection {
+  //background: bisque;
+  //padding: 4rem 1rem;
+  padding: 5.2rem 1rem;
+}
+
+.amountDataStyle {
+  color: aqua;
+}
+
+.paymentAmount {
+  font-weight: 600;
+  color: #ffff !important;
+}
+
+.waveChart {
+  color: #ffff !important;
+}
+
+.cardHeaderColor {
+  color: #ffff !important;
+}
+
+.card {
+  background: #27293d;
+  border: 0;
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 20px 0px rgb(0 0 0 / 10%);
+}
+
+@media (max-width:480px) {
+  .select-select[_ngcontent-xut-c8] {
+    font-size: 13px;
+    width: 53%;
+  }
+}
+
+@media (max-width:480px) {
+  .select-select[_ngcontent-xut-c8] {
+    font-size: 13px;
+    width: 53%;
+  }
+
+  .card-category {
+    font-size: 13px;
+    white-space: nowrap;
+    /* margin-bottom: 0px !important; */
+    align-items: center;
+    display: contents;
+  }
+
+  .select-select {
+    padding: 5px 5px;
+    width: 60%;
+  }
+
+  .card-body {
+    padding: 0px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .amountDataStyle {
+    font-size: 15px;
+  }
+
+  .paymentCollection {
+    padding: 0px !important;
+    margin-top: 12px;
+  }
+
+}

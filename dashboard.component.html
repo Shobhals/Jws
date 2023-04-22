@@ -1,0 +1,133 @@
+<div class="container-fluid">
+  <div class="row pt-3">
+    <div class="col-12 col-sm-6">
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <div class=" row">
+            <div class=" col-sm-10 col-6 text-left waveChart">
+              <h5 class=" card-category">Total Commodity Transactions</h5>
+            </div>
+            <div class=" col-sm-2 col-6 d-flex justify-content-end">
+              <select name="city" class="rounded-inputs20 select-select"
+                (change)="totalCommodityWeightBasedOnDate($event.target.value)">
+                <option value=4>Today</option>
+                <option value=1>This Week</option>
+                <option value=2>This Month</option>
+                <option value=3>This Year</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class=" card-body" id="baseChart">
+          <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [colors]="colors"
+            [options]="doughnutChartOptions" [chartType]="doughnutChartType" width="4" height="2" id="chartLineGreen">
+          </canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <div class=" row">
+            <div class="col-sm-10 col-6 text-left waveChart">
+              <h5 class=" card-category">Peak Hours</h5>
+            </div>
+            <!-- <div class="col-sm-2 col-6 d-flex justify-content-end">
+              <select name="city" class="rounded-inputs20 select-select">
+                <option>Today</option>
+                <option>This Week</option>
+                <option>This Month</option>
+                <option>This Year</option>
+              </select>
+            </div> -->
+          </div>
+        </div>
+        <div class=" card-body">
+          <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+            [colors]="barcolors" [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType"
+            width="4" height="2">
+          </canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 pt-0 pt-sm-3 pb-3">
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <div class=" row">
+            <div class="col-sm-10 col-6 text-left">
+              <h5 class=" card-category cardHeaderColor"> Total Transactions</h5>
+            </div>
+            <div class="col-sm-2 col-6 d-flex justify-content-end">
+              <select name="city" class="rounded-inputs20 select-select"
+                (change)="totalWeeklyTruckCount($event.target.value)">
+                <option value=4>Today</option>
+                <option value=1>This Week</option>
+                <option value=2>This Month</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class=" card-body">
+          <canvas baseChart [datasets]="barChartData2" [labels]="barChartLabels2" [options]="barChartOptions2"
+            [plugins]="barChartPlugins2" [legend]="barChartLegend2" [chartType]="barChartType2" [colors]="barcolors2"
+            id="barchartGreen" width="4" height="2">
+          </canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 pt-0 pt-sm-3 pb-3">
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <div class="row">
+            <div class="col-sm-10 col-6 text-left waveChart">
+              <h5 class=" card-category">Total Commodity Weight</h5>
+            </div>
+            <div class="col-sm-2 col-6 d-flex justify-content-end">
+              <select name="city" class="rounded-inputs20 select-select"
+                (change)="totalCommodityWeight($event.target.value)">
+                <option value=4>Today</option>
+                <option value=1>This Week</option>
+                <option value=2>This Month</option>
+                <option value=3>This Year</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class=" card-body d-flex justify-content-center">
+          <div class="paymentCollection">
+            <h4 class="amountDataStyle" *ngFor=" 
+              let tableData of commodityTotalNetWtDto">Total {{tableData.name}} Dispatched (MT) : <span
+                class="paymentAmount">{{tableData?.totalNetWt}} </span> </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" content">
+    <div class=" row">
+      <div class=" col-12">
+        <div class=" card card-chart">
+          <div class=" card-header">
+            <div class=" row">
+              <div class=" col-sm-6 text-left cardHeaderColor">
+                <h5 class=" card-category">Yearly Weigh Bridge Usage</h5>
+              </div>
+              <div class=" col-sm-6">
+                <div class=" btn-group btn-group-toggle float-right" data-toggle="buttons">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="chart-area">
+              <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+                [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"
+                [plugins]="lineChartPlugins" width="1800" height="200" id="chartLineBlue">
+              </canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
